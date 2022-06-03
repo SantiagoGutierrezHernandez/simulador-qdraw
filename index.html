@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Simulador QDraw</title>
+</head>
+<body>
+    <h1>Simulador QDraw</h1>
+
+    <form id="grid-creator" action="">
+        <label for="create-width">Ancho</label>
+        <input type="number" name="create-width" id="create-width" min=1 value=1>
+        <label for="height">Alto</label>
+        <input type="number" name="height" id="create-height" min=1 value=1>
+        <button id="create-grid" value="Crear cuadricula">Crear cuadricula</button>
+    </form>
+    <div id="grid-container">
+        Aún no se ha creado la cuadrícula.
+    </div>
+    <div id="header-buttons">
+        <button id="MoverArriba" value="MoverArriba">MoverArriba</button>
+        <button id="MoverAbajo" value="MoverAbajo">MoverAbajo</button>
+        <button id="MoverIzquierda" value="MoverIzquierda">MoverIzquierda</button>
+        <button id="MoverDerecha" value="MoverDerecha">MoverDerecha</button>
+        <button id="Limpiar" value="Limpiar">Limpiar</button>
+        <button id="PintarNegro" value="PintarNegro">PintarNegro</button>
+        <button id="PintarVerde" value="PintarVerde">PintarVerde</button>
+        <button id="PintarRojo" value="PintarRojo">PintarRojo</button>
+    </div>
+
+    <div id="programa">
+        <button id="programa-run" value="Correr programa">Correr programa</button>
+        <br>
+        programa {
+        <br>
+            <textarea id="programa-instrucciones" name="programa-instrucciones" oninput='this.style.height = "5px";this.style.height = (this.scrollHeight)+"px";'></textarea>
+        <br>
+        }
+    </div>
+
+    <div id="add-procedimiento">
+        <label for="add-procedimiento-name">Nombre del Procedimiento</label>
+        <input type="text" name="add-procedimiento-name" id="add-procedimiento-name">
+        <button value="Agregar Procedimiento" id="btn-add-procedimiento">Agregar Procedimiento</button>
+    </div>
+    <div id="procedimientos">
+    </div>
+
+    <section>
+        <button id="generate-text" value="Generar texto">Generar texto</button>
+        <div id="output-txt"></div>
+    </section>
+
+    <script src="./js/qdraw.js"></script>
+</body>
+</html>

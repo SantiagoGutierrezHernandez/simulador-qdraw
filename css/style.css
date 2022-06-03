@@ -1,0 +1,22 @@
+.row{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.cell{
+    border: 2px gray solid;
+    width: 20px;
+    height: 20px;
+    background-color: whitesmoke;
+}
+#header-cell{
+    border: 2px solid yellow
+}
+.black{
+    background-color:  black !important;
+}
+.red{
+    background-color: red !important;
+}
+.green{
+    background-color: green !important;
+}
